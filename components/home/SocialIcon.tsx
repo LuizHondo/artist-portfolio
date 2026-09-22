@@ -2,7 +2,7 @@
 
 import gsap from "gsap";
 import { useRef } from "react";
-import { Icon } from "@/lib/design/shared";
+import { Icon, type IconName } from "@/lib/design/shared";
 import { COLORS } from "@/lib/theme";
 
 // Visual hover: cream fill wipes in behind the icon, the icon inverts to ink,
@@ -14,7 +14,7 @@ export function SocialIcon({
 	size = 14,
 	style,
 }: {
-	socialKey: string;
+	socialKey: IconName;
 	url: string;
 	size?: number;
 	style?: React.CSSProperties;
