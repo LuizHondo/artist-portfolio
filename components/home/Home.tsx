@@ -155,13 +155,17 @@ export function Home({ artworks }: { artworks: Artwork[] }) {
 									</div>
 								),
 							}))}
-							imageWidth={isMobile ? 190 : 260}
-							imageHeight={isMobile ? 250 : 340}
-							gap={isMobile ? 20 : 32}
+							imageWidth={isMobile ? 100 : 170}
+							imageHeight={isMobile ? 400 : 350}
+							gap={isMobile ? 10 : 20}
 							parallaxIntensity={0.50}
 							borderRadius={0}
 							loop
-							autoplaySpeed={100}
+							autoplaySpeed={20}
+							pauseOnHover={false}
+							dragSensitivity={0.8}
+							
+
 						/>
 					</div>
 					<div style={{ textAlign: "center", marginTop: 16 }}>

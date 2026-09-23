@@ -237,7 +237,11 @@ const Plane: React.FC<PlaneProps> = ({
 					tex.dispose();
 					return;
 				}
-				tex.colorSpace = THREE.SRGBColorSpace;
+				// Raw ShaderMaterial samples with texture2D and writes straight
+				// to gl_FragColor with no output-colorspace re-encode, so the
+				// texture must stay un-decoded (NoColorSpace) or the linear
+				// values get displayed as sRGB, crushing blacks/adding contrast.
+				tex.colorSpace = THREE.NoColorSpace;
 				tex.minFilter = THREE.LinearFilter;
 				tex.magFilter = THREE.LinearFilter;
 				tex.wrapS = THREE.ClampToEdgeWrapping;
@@ -637,6 +641,8 @@ const ParallaxCarousel = React.forwardRef<
 								}}
 								href={item.href}
 								className="gallery-card"
+								draggable={false}
+								onDragStart={(e) => e.preventDefault()}
 								style={{
 									position: "absolute",
 									top: 0,
