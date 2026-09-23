@@ -61,29 +61,39 @@ export function EnterButton({
 		});
 	};
 
+	// `opacity`/`transition` belong to the caller's mount-fade, not the hover
+	// interaction below — keeping them off wrapRef stops that CSS transition
+	// from fighting GSAP's own tweens on the same element.
+	const { opacity, transition, ...restStyle } = style ?? {};
+
 	return (
-		<a
-			ref={wrapRef}
-			href={href}
-			style={{ ...style, position: "relative", overflow: "hidden" }}
-			onClick={onClick}
-			onMouseEnter={onEnter}
-			onMouseLeave={onLeave}
-		>
-			<span
-				ref={wipeRef}
-				style={{
-					position: "absolute",
-					inset: 0,
-					background: COLORS.ink,
-					transform: "scaleX(0)",
-					transformOrigin: "left center",
-					pointerEvents: "none",
-				}}
-			/>
-			<span ref={labelRef} style={{ position: "relative", color: COLORS.ink }}>
-				{children}
-			</span>
-		</a>
+		<span style={{ display: "contents", opacity, transition }}>
+			<a
+				ref={wrapRef}
+				href={href}
+				style={{ ...restStyle, position: "relative", overflow: "hidden" }}
+				onClick={onClick}
+				onMouseEnter={onEnter}
+				onMouseLeave={onLeave}
+			>
+				<span
+					ref={wipeRef}
+					style={{
+						position: "absolute",
+						inset: 0,
+						background: COLORS.ink,
+						transform: "scaleX(0)",
+						transformOrigin: "left center",
+						pointerEvents: "none",
+					}}
+				/>
+				<span
+					ref={labelRef}
+					style={{ position: "relative", color: COLORS.ink }}
+				>
+					{children}
+				</span>
+			</a>
+		</span>
 	);
 }
