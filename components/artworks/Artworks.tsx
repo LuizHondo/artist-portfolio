@@ -28,7 +28,7 @@ export function Artworks({ artworks }: { artworks: Artwork[] }) {
 			<div style={s.sectionHead}>
 				<h2 style={s.sectionTitle}>Artworks</h2>
 				{artworks.length > 0 && (
-					<div style={s.sectionSub}>
+					<div className="section-sub" style={s.sectionSub}>
 						{Math.min(...years)} — {Math.max(...years)} · {artworks.length}{" "}
 						artworks
 					</div>

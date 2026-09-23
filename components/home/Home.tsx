@@ -28,7 +28,7 @@ export function Home({ artworks }: { artworks: Artwork[] }) {
 			<div style={s.sectionHead}>
 				<h2 style={s.sectionTitle}>Featured Works</h2>
 				{shown.length > 0 && (
-					<div style={s.sectionSub}>
+					<div className="section-sub" style={s.sectionSub}>
 						{Math.min(...years)} — {Math.max(...years)} · {shown.length}{" "}
 						artworks
 					</div>
@@ -158,14 +158,12 @@ export function Home({ artworks }: { artworks: Artwork[] }) {
 							imageWidth={isMobile ? 100 : 170}
 							imageHeight={isMobile ? 400 : 350}
 							gap={isMobile ? 10 : 20}
-							parallaxIntensity={0.50}
+							parallaxIntensity={0.5}
 							borderRadius={0}
 							loop
 							autoplaySpeed={20}
 							pauseOnHover={false}
 							dragSensitivity={0.8}
-							
-
 						/>
 					</div>
 					<div style={{ textAlign: "center", marginTop: 16 }}>
