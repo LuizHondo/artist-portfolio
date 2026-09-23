@@ -212,20 +212,15 @@ dialog.lightbox[open]::backdrop {
 	}
 }
 
-.nav-burger {
-	display: none;
-}
 @media (max-width: 760px) {
+	nav {
+		padding-left: 16px !important;
+		padding-right: 16px !important;
+	}
 	.nav-links-row {
-		display: none;
+		flex: 1;
+		justify-content: space-evenly;
+		gap: 0;
+		font-size: 11px;
 	}
-	.nav-burger {
-		display: inline-flex;
-	}
-	.nav-mobile-menu {
-		display: flex;
-	}
-}
-.nav-mobile-menu {
-	display: none;
 }
