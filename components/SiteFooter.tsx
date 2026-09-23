@@ -81,7 +81,7 @@ const footerStyles = {
 		padding: 0,
 		textAlign: "left" as const,
 	},
-	gap: { height: "clamp(120px,14cqw,220px)" },
+	gap: { height: "clamp(60px,7cqw,110px)" },
 	markRow: { padding: "0 0 clamp(18px,2cqw,34px)" },
 	mark: {
 		fontFamily: '"Permanent Marker", cursive',
