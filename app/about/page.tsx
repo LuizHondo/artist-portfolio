@@ -167,17 +167,19 @@ export default async function AboutPage() {
 		<Paper style={s.page}>
 			<PublicNav active="About" variant="bar" />
 
-			<div style={{ padding: "56px 56px 0" }}>
+			<div className="about-header" style={{ padding: "56px 56px 0" }}>
 				<div style={hs.sectionHead}>
 					<h2 style={hs.sectionTitle}>About</h2>
-					<div style={hs.sectionSub}>Curitiba, Brazil · est. 2000</div>
+					<div className="section-sub" style={hs.sectionSub}>
+						Curitiba, Brazil · est. 2000
+					</div>
 				</div>
 			</div>
 
-			<section style={s.hero}>
+			<section className="about-hero" style={s.hero}>
 				{/* biome-ignore lint/performance/noImgElement: admin-entered URL, arbitrary hosts */}
 				<img src={about.heroImage} alt="Raul" style={s.heroImg} />
-				<div style={s.heroRight}>
+				<div className="about-hero-right" style={s.heroRight}>
 					<h1 style={s.bigName}>Raul Barbosa</h1>
 					<div style={s.bigTag}>{about.tagline}</div>
 					<div style={s.bio}>
@@ -231,7 +233,7 @@ export default async function AboutPage() {
 				</div>
 			</section>
 
-			<section style={s.body}>
+			<section className="about-body" style={s.body}>
 				<div>
 					<h2 style={s.h2}>Disciplines</h2>
 					<div style={s.skills}>
@@ -258,7 +260,7 @@ export default async function AboutPage() {
 				</div>
 			</section>
 
-			<section style={s.cta}>
+			<section className="about-cta" style={s.cta}>
 				<h3 style={s.ctaText}>Want the long version?</h3>
 				<div style={s.ctaBtns}>
 					<a
