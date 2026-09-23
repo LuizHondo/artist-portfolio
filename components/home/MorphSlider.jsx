@@ -568,6 +568,7 @@ export default function MorphSlider({
 	const handleNext = useCallback(() => engineRef.current?.next(), []);
 	const handlePrev = useCallback(() => engineRef.current?.prev(), []);
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: index intentionally restarts the timer on each slide change
 	useEffect(() => {
 		if (!autoplay) return undefined;
 		const id = setTimeout(
