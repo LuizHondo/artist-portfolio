@@ -48,7 +48,7 @@ const footerStyles = {
 	},
 	cols: {
 		display: "grid",
-		gridTemplateColumns: "repeat(3, minmax(0,1fr))",
+		gridTemplateColumns: "repeat(2, minmax(0,1fr))",
 		gap: 32,
 		paddingTop: 10,
 	},
@@ -112,7 +112,7 @@ const footerStyles = {
 export function SiteFooter() {
 	return (
 		<footer style={footerStyles.wrap}>
-			<div style={footerStyles.top}>
+			<div className="footer-top" style={footerStyles.top}>
 				<div>
 					<p style={footerStyles.ctaLabel}>Commissions open — 2026</p>
 					<a href={`mailto:${CONTACT_EMAIL}`} style={footerStyles.ctaLink}>
@@ -124,7 +124,7 @@ export function SiteFooter() {
 						{CONTACT_EMAIL}
 					</a>
 				</div>
-				<div style={footerStyles.cols}>
+				<div className="footer-cols" style={footerStyles.cols}>
 					<div>
 						<p style={footerStyles.colHead}>Index</p>
 						<ul style={footerStyles.colList}>
@@ -160,20 +160,6 @@ export function SiteFooter() {
 									</a>
 								</li>
 							))}
-						</ul>
-					</div>
-					<div>
-						<p style={footerStyles.colHead}>Studio</p>
-						<ul style={footerStyles.colList}>
-							<li>
-								<span style={footerStyles.colItem}>Curitiba, BR</span>
-							</li>
-							<li>
-								<span style={footerStyles.colItem}>Illustration · Concept</span>
-							</li>
-							<li>
-								<span style={footerStyles.colItem}>Character · Visual dev</span>
-							</li>
 						</ul>
 					</div>
 				</div>
