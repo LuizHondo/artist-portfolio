@@ -168,7 +168,6 @@ export const projV2Styles: Record<string, CSSProperties> = {
 	},
 	contactEmail: {
 		fontFamily: '"Permanent Marker", cursive',
-		fontSize: 22,
 		fontWeight: 400,
 		marginBottom: 24,
 	},

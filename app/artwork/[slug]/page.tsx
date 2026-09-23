@@ -160,7 +160,10 @@ export default async function ArtworkPage({
 						<div style={{ ...s.contactNote, color: COLORS.accent }}>
 							tea? coffee? a cat photo?
 						</div>
-						<div style={s.contactEmail}>
+						<div
+							style={s.contactEmail}
+							className="text-[16px] break-all md:text-[22px]"
+						>
 							<a
 								href={`mailto:${CONTACT_EMAIL}`}
 								style={{ color: "inherit", textDecoration: "none" }}
