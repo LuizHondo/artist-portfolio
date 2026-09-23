@@ -2,9 +2,9 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { EnterButton } from "@/components/home/EnterButton";
 import { homeV1Styles as s } from "@/components/home/homeStyles";
 import MorphSlider from "@/components/home/MorphSlider";
-import { EnterButton } from "@/components/home/EnterButton";
 import { SocialIcon } from "@/components/home/SocialIcon";
 import { PublicNav } from "@/components/PublicNav";
 import { Icon } from "@/lib/design/shared";
