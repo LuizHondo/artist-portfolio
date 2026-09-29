@@ -149,7 +149,7 @@ export function Home({ artworks }: { artworks: Artwork[] }) {
 							borderRadius={0}
 							loop
 							autoplaySpeed={20}
-							pauseOnHover={false}
+							pauseOnHover
 							dragSensitivity={0.8}
 						/>
 					</div>
