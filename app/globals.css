@@ -226,8 +226,19 @@ dialog.lightbox[open]::backdrop {
 }
 
 @media (max-width: 760px) {
+	.home-section {
+		padding: 56px 20px !important;
+	}
 	.section-sub {
 		display: none !important;
+	}
+	.tier1-grid {
+		grid-template-columns: 1fr !important;
+		gap: 36px !important;
+	}
+	.tier2-grid {
+		grid-template-columns: 1fr !important;
+		gap: 24px !important;
 	}
 }
 

@@ -21,10 +21,7 @@ export function Home({ artworks }: { artworks: Artwork[] }) {
 	const years = shown.map((a) => a.yearCreated);
 
 	return (
-		<section
-			id="gallery"
-			style={{ ...s.section, ...(isMobile ? { padding: "56px 20px" } : {}) }}
-		>
+		<section id="gallery" className="home-section" style={s.section}>
 			<div style={s.sectionHead}>
 				<h2 style={s.sectionTitle}>Featured Works</h2>
 				{shown.length > 0 && (
@@ -41,12 +38,7 @@ export function Home({ artworks }: { artworks: Artwork[] }) {
 						<span style={s.tierLabel}>Featured</span>
 						<span style={s.tierNote}>priority 01</span>
 					</div>
-					<div
-						style={{
-							...s.tier1Grid,
-							...(isMobile ? { gridTemplateColumns: "1fr", gap: 36 } : {}),
-						}}
-					>
+					<div className="tier1-grid" style={s.tier1Grid}>
 						{t1.map((a) => (
 							<Link
 								key={a.id}
@@ -82,12 +74,7 @@ export function Home({ artworks }: { artworks: Artwork[] }) {
 						<span style={s.tierLabel}>Also worth a look</span>
 						<span style={s.tierNote}>priority 02</span>
 					</div>
-					<div
-						style={{
-							...s.tier2Grid,
-							...(isMobile ? { gridTemplateColumns: "1fr", gap: 24 } : {}),
-						}}
-					>
+					<div className="tier2-grid" style={s.tier2Grid}>
 						{t2.map((a) => (
 							<Link
 								key={a.id}
