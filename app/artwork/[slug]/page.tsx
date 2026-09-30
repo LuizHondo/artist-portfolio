@@ -115,7 +115,7 @@ export default async function ArtworkPage({
 										<img
 											src={image.url}
 											alt={image.title}
-											style={{ ...s.entryImg, marginTop: "auto" }}
+											style={s.entryImg}
 										/>
 									</div>
 								))}
