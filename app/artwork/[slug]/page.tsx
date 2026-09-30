@@ -76,7 +76,7 @@ export default async function ArtworkPage({
 					</div>
 				</div>
 
-				<div className="px-5 md:px-16" style={{ maxWidth: 980 }}>
+				<div className="px-5 md:px-16">
 					<p
 						className="text-[19px] md:text-[27px]"
 						style={{ lineHeight: 1.5, letterSpacing: "-0.005em" }}
