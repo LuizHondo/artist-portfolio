@@ -73,7 +73,6 @@ export default async function ArtworkPage({
 							alt={artwork.title}
 							style={s.heroPlateImg}
 						/>
-						<div style={s.heroCaption}>{artwork.title} — cover</div>
 					</div>
 				</div>
 
