@@ -106,10 +106,6 @@ export default async function ArtworkPage({
 										}}
 									>
 										<div style={s.entryTextPad}>
-											<div style={s.entryNum}>
-												{String(entry.displayOrder).padStart(2, "0")} ·{" "}
-												{entry.columns} COL
-											</div>
 											<h3 style={s.entryTitle}>{image.title}</h3>
 											<div style={s.entryDesc}>
 												<MarkText text={image.description} />
