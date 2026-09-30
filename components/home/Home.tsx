@@ -36,7 +36,6 @@ export function Home({ artworks }: { artworks: Artwork[] }) {
 				<>
 					<div style={s.tierHead}>
 						<span style={s.tierLabel}>Featured</span>
-						<span style={s.tierNote}>priority 01</span>
 					</div>
 					<div className="tier1-grid" style={s.tier1Grid}>
 						{t1.map((a) => (
@@ -72,7 +71,6 @@ export function Home({ artworks }: { artworks: Artwork[] }) {
 				<>
 					<div style={s.tierHead}>
 						<span style={s.tierLabel}>Also worth a look</span>
-						<span style={s.tierNote}>priority 02</span>
 					</div>
 					<div className="tier2-grid" style={s.tier2Grid}>
 						{t2.map((a) => (
@@ -107,7 +105,6 @@ export function Home({ artworks }: { artworks: Artwork[] }) {
 				<>
 					<div style={s.tierHead}>
 						<span style={s.tierLabel}>Archive</span>
-						<span style={s.tierNote}>priority 03</span>
 					</div>
 					<div
 						style={{
