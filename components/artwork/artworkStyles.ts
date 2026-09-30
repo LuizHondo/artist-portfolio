@@ -99,7 +99,7 @@ export const projV2Styles: Record<string, CSSProperties> = {
 	entryDesc: {
 		fontSize: 18,
 		lineHeight: 1.7,
-		maxWidth: "62ch",
+		textAlign: "justify",
 		overflowWrap: "break-word",
 	},
 	entryTextPad: { paddingBottom: 18 },
