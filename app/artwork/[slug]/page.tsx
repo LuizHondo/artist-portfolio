@@ -93,7 +93,7 @@ export default async function ArtworkPage({
 						return (
 							<div
 								key={entry.id}
-								className="grid grid-cols-1 gap-6 md:gap-10 md:[grid-template-columns:repeat(var(--cols),1fr)]"
+								className="grid grid-cols-1 items-start gap-6 md:gap-10 md:[grid-template-columns:repeat(var(--cols),1fr)]"
 								style={{ "--cols": entry.columns } as CSSProperties}
 							>
 								{entry.images.map((image) => (
