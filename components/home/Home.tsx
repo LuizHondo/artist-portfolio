@@ -139,7 +139,7 @@ export function Home({ artworks }: { artworks: Artwork[] }) {
 									</div>
 								),
 							}))}
-							imageWidth={isMobile ? 100 : 170}
+							imageWidth={isMobile ? 320 : 560}
 							imageHeight={isMobile ? 400 : 350}
 							gap={isMobile ? 10 : 20}
 							parallaxIntensity={0.5}
